@@ -593,7 +593,7 @@ nav {
 
 .stat-card {
     background: var(--card-bg);
-    padding: 25px 40px;
+    padding: 20px 50px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
