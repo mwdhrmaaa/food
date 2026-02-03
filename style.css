@@ -588,16 +588,17 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 25px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .stat-card {
     background: var(--card-bg);
-    padding: 30px;
-    border-radius: 20px;
+    padding: 25px 40px;
+    border-radius: 15px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     transition: var(--transition);
+    min-width: 180px;
 }
 
 .stat-card:hover {
