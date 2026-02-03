@@ -56,4 +56,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Modal Logic
+    const foodModal = document.getElementById('foodModal');
+    const modalClose = document.querySelector('.modal-close');
+    const foodCards = document.querySelectorAll('.food-card');
+
+    const openModal = (card) => {
+        const title = card.querySelector('h3').innerText;
+        const price = card.querySelector('.price:first-child').innerText;
+        const image = card.querySelector('img').src;
+        const ingredients = card.dataset.ingredients || "Selected fresh ingredients";
+        const description = card.dataset.description || "A delicious premium dish prepared by our expert chefs.";
+
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalPrice').innerText = price;
+        document.getElementById('modalImage').src = image;
+        document.getElementById('modalIng').innerText = ingredients;
+        document.getElementById('modalDesc').innerText = description;
+
+        foodModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+    };
+
+    const closeModal = () => {
+        foodModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+    };
+
+    foodCards.forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+    });
+
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    // Close on outside click
+    foodModal.addEventListener('click', (e) => {
+        if (e.target === foodModal) closeModal();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
 });

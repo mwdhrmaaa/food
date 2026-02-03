@@ -51,22 +51,10 @@
             </div>
         </section>
 
-        <!-- Category Section -->
-        <section class="categories container">
-            <div class="category-slider">
-                <div class="category-item active">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=150&q=80" alt="Category 1">
-                </div>
-                <div class="category-item">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=150&q=80" alt="Category 2">
-                </div>
-                <div class="category-item">
-                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?auto=format&fit=crop&w=150&q=80" alt="Category 3">
-                </div>
-                <div class="category-item">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=150&q=80" alt="Category 4">
-                </div>
-                <div class="btn-all">Our Menu &gt;</div>
+        <!-- Menu Title Section -->
+        <section class="menu-title container">
+            <div class="centered-header">
+                <h2>Our Menu</h2>
             </div>
         </section>
 
@@ -79,7 +67,7 @@
             
             <div class="menu-grid">
                 <!-- Food Card 1 -->
-                <div class="food-card">
+                <div class="food-card" data-ingredients="Grilled Chicken, Fresh Lettuce, Cucumber, Cherry Tomatoes, Signature Garlic Sauce" data-description="A perfect balance of protein and fresh vegetables. Our signature chicken is marinated for 24 hours in a blend of Mediterranean spices.">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80" alt="Food 1">
                         <span class="tag">Order</span>
@@ -96,7 +84,7 @@
                 </div>
 
                 <!-- Food Card 2 -->
-                <div class="food-card">
+                <div class="food-card" data-ingredients="Avocado, Baby Spinach, Roasted Chickpeas, Lemon Vinaigrette, Radish" data-description="A refreshing mix of superfoods designed to boost your energy levels and provide essential nutrients.">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=400&q=80" alt="Food 2">
                         <span class="tag">Order</span>
@@ -113,7 +101,7 @@
                 </div>
 
                 <!-- Food Card 3 -->
-                <div class="food-card">
+                <div class="food-card" data-ingredients="Atlantic Salmon, Mixed Leaves, Radish, Edamame, Honey Soy Dressing" data-description="Freshly caught salmon seared to perfection, served on a bed of vibrant seasonal greens.">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Food 3">
                         <span class="tag">Order</span>
@@ -130,7 +118,7 @@
                 </div>
 
                 <!-- Food Card 4 -->
-                <div class="food-card">
+                <div class="food-card" data-ingredients="San Marzano Tomatoes, Buffalo Mozzarella, Extra Virgin Olive Oil, Fresh Basil" data-description="The pride of Naples. Hand-stretched dough baked in a 400°C stone oven for that authentic smoky crust.">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Food 4">
                         <span class="tag">Order</span>
@@ -147,7 +135,7 @@
                 </div>
 
                 <!-- Food Card 5 -->
-                <div class="food-card">
+                <div class="food-card" data-ingredients="Grass-fed Ribeye, Roasted Asparagus, Garlic Butter, Red Wine Jus" data-description="Prime cut steak grilled to your liking. Served with seasonal greens and a rich gravy.">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80" alt="Food 5">
                         <span class="tag">Order</span>
@@ -164,7 +152,7 @@
                 </div>
 
                 <!-- Food Card 6 -->
-                <div class="food-card">
+                <div class="food-card" data-ingredients="Fluffy Buttermilk Pancakes, Maple Syrup, Fresh Berries, Whipped Cream" data-description="A stack of golden brown pancakes topped with the freshest fruits of the season.">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=400&q=80" alt="Food 6">
                         <span class="tag">Order</span>
@@ -436,6 +424,31 @@
             </div>
         </section>
     </main>
+
+    <!-- Food Detail Modal -->
+    <div class="modal-overlay" id="foodModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-col">
+                    <img src="" alt="Food Image" id="modalImage">
+                </div>
+                <div class="modal-info-col">
+                    <h2 id="modalTitle">Food Name</h2>
+                    <p class="modal-price" id="modalPrice">$0.00</p>
+                    <div class="modal-description">
+                        <h3>Detailed Description</h3>
+                        <p id="modalDesc">Full description goes here...</p>
+                    </div>
+                    <div class="modal-ingredients">
+                        <h3>Main Ingredients</h3>
+                        <p id="modalIng">Ingredient 1, Ingredient 2, ...</p>
+                    </div>
+                    <button class="btn btn-primary modal-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
