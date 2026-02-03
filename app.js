@@ -45,4 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Button clicked:', btn.innerText);
         });
     });
+
+    // Smooth scroll for "Our Menu" button in category slider
+    const menuBtn = document.querySelector('.btn-all');
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            const menuSection = document.getElementById('menuSection');
+            if (menuSection) {
+                menuSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
 });
