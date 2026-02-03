@@ -186,10 +186,10 @@ nav {
 }
 
 .main-dish-wrapper img {
-    width: 500px;
-    height: 500px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 40px;
     object-fit: cover;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
 }
@@ -224,7 +224,7 @@ nav {
 .category-item {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
     transition: var(--transition);
@@ -297,7 +297,7 @@ nav {
 .card-image {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 20px;
     overflow: visible;
     position: relative;
 }
@@ -305,7 +305,7 @@ nav {
 .card-image img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 20px;
     object-fit: cover;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
@@ -409,10 +409,10 @@ nav {
 
 .promo-banner img {
     width: 100%;
-    max-width: 400px;
-    aspect-ratio: 1/1;
+    max-width: 450px;
+    height: auto;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 40px;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
 }
 
@@ -442,9 +442,10 @@ nav {
         display: none;
     }
     .main-dish-wrapper img {
-        width: 300px;
-        height: 300px;
-        max-width: 100%;
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        border-radius: 30px;
     }
     .category-slider {
         border-radius: 30px;
